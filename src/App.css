@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.Header {
+  background-color: red;
+  color: black ;
+  font-size: 50px ;
+}
+
+.ImageRose {
+  max-width: 500px;
+  max-height: 500px;
+}
