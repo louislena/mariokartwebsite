@@ -8,6 +8,11 @@ function App() {
 
   const trackNumbers = [4,6,8,12,16,24,32,48]
 
+  const characterImg = [
+    "a",
+    "b"
+  ]
+
   const defaultPlayer = new Array(4).fill("outline-danger")
 
   const defaultTrack = new Array(8).fill("outline-danger")
