@@ -1,12 +1,16 @@
 import { Button, ButtonGroup, Spinner } from 'react-bootstrap';
 import './App.css';
 import { useState } from 'react';
-
+import Table from 'react-bootstrap/Table';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
 function App() {
 
-  const playerNumbers = [1,2,3,4]
+  const playerNumbers = [1, 2, 3, 4]
 
-  const trackNumbers = [4,6,8,12,16,24,32,48]
+  const trackNumbers = [4, 6, 8, 12, 16, 24, 32, 48]
 
   const characterImg = [
     "a",
@@ -21,13 +25,13 @@ function App() {
 
   const [trackActive, setTrackActive] = useState(defaultTrack)
 
-  function changeActivePlayer(number){
+  function changeActivePlayer(number) {
     var an = [...defaultPlayer]
     an[number] = "success"
     setPlayerActive(an)
   }
 
-  function changeActiveTrack(number){
+  function changeActiveTrack(number) {
     var an = [...defaultTrack]
     an[number] = "success"
     setTrackActive(an)
@@ -35,23 +39,24 @@ function App() {
 
   return (
     <div className="App">
+      <br />
       <h1 className='Header'>Mario Cart Randomizer</h1>
       <br />
       <p>Please select number of players, number of rounds and the items you would like to use</p>
       <br />
-      <br />
       <h2>Number of players</h2>
-      <ButtonGroup aria-label="Number of player buttons"> 
-        {playerNumbers.map((x,index) => <Button key={x} onClick={() => changeActivePlayer(index)} variant={playerActive[index]} size="lg">{x}</Button>)}
+      <ButtonGroup aria-label="Number of player buttons">
+        {playerNumbers.map((x, index) => <Button key={x} onClick={() => changeActivePlayer(index)} variant={playerActive[index]} size="lg">{x}</Button>)}
       </ButtonGroup>
       <br />
       <br />
       <h2>Number of maps</h2>
-      <ButtonGroup aria-label="Number of player buttons"> 
-        {trackNumbers.map((x,index) => <Button key={x} onClick={() => changeActiveTrack(index)} variant={trackActive[index]} size="lg">{x}</Button>)}
+      <ButtonGroup aria-label="Number of player buttons">
+        {trackNumbers.map((x, index) => <Button key={x} onClick={() => changeActiveTrack(index)} variant={trackActive[index]} size="lg">{x}</Button>)}
       </ButtonGroup>
       <br />
-
+      <br />
+      <br />
     </div>
   );
 }
